@@ -2,9 +2,9 @@
     <string name="app_name">RelativeLayout2</string>
     <string name="bluebg">BlueBg</string>
     <string name="students">Students</string>
-    <string name="marks">\t\t\tMark\n Attendence</string>
-    <string name="marks2">\t\t\tShow\n Attendence</string>
-    <string name="marks3"> Home\n  Work</string>
+    <string name="marks">\t\t Mark\nAttendence</string>
+    <string name="marks2">\t\t Show\nAttendence</string>
+    <string name="marks3">Home\nWork</string>
     <string name="markAtten">markAtten</string>
     <string name="notice">Notice</string>
     <string name="gallery">Gallery</string>

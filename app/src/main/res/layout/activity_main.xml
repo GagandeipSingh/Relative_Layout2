@@ -7,280 +7,304 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/bluebg"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bluebg"
-            tools:ignore="ImageContrastCheck" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp"
-        android:background="@drawable/border">
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
-            android:id="@+id/students"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="16dp"
-                app:cardCornerRadius="16dp">
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_240sdp">
 
                 <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/students"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/images"
+                    android:contentDescription="@string/bluebg"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bluebg"
                     tools:ignore="ImageContrastCheck" />
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/assign"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/students"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="16dp">
+            </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/firstlayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/firstbg">
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_600sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/border">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/firstImg"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="25dp"
-                    app:cardCornerRadius="5dp">
+                <RelativeLayout
+                    android:id="@+id/students"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp">
 
-                    <ImageView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:contentDescription="@string/markAtten"
-                        android:src="@drawable/attendance"
-                        tools:ignore="ImageContrastCheck" />
-                </androidx.cardview.widget.CardView>
+                        android:layout_height="@dimen/_160sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        app:cardCornerRadius="@dimen/_16sdp">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/students"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/images"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/assign"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/firstImg"
-                    android:layout_margin="8dp"
-                    android:text="@string/marks"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    tools:ignore="TextContrastCheck" />
-            </RelativeLayout>
+                    android:layout_below="@+id/students"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center_horizontal">
 
-            <RelativeLayout
-                android:id="@+id/secondlayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_toEndOf="@+id/firstlayout"
-                android:background="@drawable/secondbg">
+                    <RelativeLayout
+                        android:id="@+id/firstlayout"
+                        android:layout_width="wrap_content"
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/secondImg"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="25dp"
-                    app:cardCornerRadius="5dp">
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/firstbg">
 
-                    <ImageView
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/firstImg"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            app:cardCornerRadius="@dimen/_5sdp">
 
-                        android:layout_width="match_parent"
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/markAtten"
+                                android:src="@drawable/attendance"
+                                tools:ignore="ImageContrastCheck" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/firstImg"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:text="@string/marks"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            tools:ignore="TextContrastCheck" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/secondlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_toEndOf="@+id/firstlayout"
+                        android:background="@drawable/secondbg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/secondImg"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <ImageView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/markAtten"
+                                android:src="@drawable/sattendance"
+                                tools:ignore="ImageContrastCheck" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/secondImg"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:text="@string/marks2"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            tools:ignore="TextContrastCheck" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_toEndOf="@+id/secondlayout"
+                        android:background="@drawable/thirdbg">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/thirdImg"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/markAtten"
+                                android:src="@drawable/work"
+                                tools:ignore="ImageContrastCheck" />
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/thirdImg"
+                            android:layout_marginHorizontal="@dimen/_24sdp"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:text="@string/marks3"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            tools:ignore="TextContrastCheck" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/blayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_below="@+id/assign"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center_horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/bbg1"
+                        android:layout_width="@dimen/_125sdp"
                         android:layout_height="match_parent"
-                        android:contentDescription="@string/markAtten"
-                        android:src="@drawable/sattendance"
-                        tools:ignore="ImageContrastCheck" />
-                </androidx.cardview.widget.CardView>
+                        android:background="@drawable/bbg1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/secondImg"
-                    android:layout_margin="8dp"
-                    android:text="@string/marks2"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    tools:ignore="TextContrastCheck" />
-            </RelativeLayout>
+                        <TextView
+                            android:id="@+id/galleryTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:text="@string/gallery"
+                            android:textColor="#D62D6E"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_toEndOf="@+id/secondlayout"
-                android:background="@drawable/thirdbg">
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/galleryTxt"
+                            android:src="@drawable/gallerym"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/thirdImg"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="25dp"
-                    app:cardCornerRadius="5dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
+                    <RelativeLayout
+                        android:layout_width="@dimen/_125sdp"
                         android:layout_height="match_parent"
-                        android:contentDescription="@string/markAtten"
-                        android:src="@drawable/work"
-                        tools:ignore="ImageContrastCheck" />
-                </androidx.cardview.widget.CardView>
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/bbg1"
+                        android:background="@drawable/bbg2">
 
+                        <TextView
+                            android:id="@+id/NoticeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:text="@string/notice"
+                            android:textColor="#28B05A"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/thirdImg"
-                    android:layout_marginHorizontal="27dp"
-                    android:layout_marginVertical="8dp"
-                    android:text="@string/marks3"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    tools:ignore="TextContrastCheck" />
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/NoticeTxt"
+                            android:src="@drawable/email"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_below="@+id/blayout1"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center_horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/bbg3"
+                        android:layout_width="@dimen/_125sdp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bbg3">
+
+                        <TextView
+                            android:id="@+id/feeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:text="@string/fee"
+                            android:textColor="#016098"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/feeTxt"
+                            android:src="@drawable/moneybagm"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_125sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/bbg3"
+                        android:background="@drawable/bbg4">
+
+                        <TextView
+                            android:id="@+id/aboutTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:text="@string/about"
+                            android:textColor="#FF9A1C"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/aboutTxt"
+                            android:src="@drawable/bag"
+                            tools:ignore="ContentDescription,ImageContrastCheck" />
+                    </RelativeLayout>
+                </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/blayout1"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center_horizontal"
-            android:layout_below="@+id/assign"
-            android:layout_marginTop="16dp">
-            <RelativeLayout
-                android:id="@+id/bbg1"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/bbg1">
-                <TextView
-                    android:id="@+id/galleryTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/gallery"
-                    android:layout_marginHorizontal="20sp"
-                    android:textColor="#D62D6E"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_centerVertical="true"/>
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/gallerym"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/galleryTxt"
-                    tools:ignore="ContentDescription" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_toEndOf="@+id/bbg1"
-                android:layout_marginStart="16dp"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/bbg2">
-
-                <TextView
-                    android:id="@+id/NoticeTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="20sp"
-                    android:text="@string/notice"
-                    android:textColor="#28B05A"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/NoticeTxt"
-                    android:src="@drawable/email"
-                    tools:ignore="ContentDescription,ImageContrastCheck" />
-            </RelativeLayout>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center_horizontal"
-            android:layout_below="@+id/blayout1"
-            android:layout_marginTop="16dp"
-            >
-            <RelativeLayout
-                android:id="@+id/bbg3"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/bbg3">
-                <TextView
-                    android:id="@+id/feeTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fee"
-                    android:layout_marginHorizontal="20sp"
-                    android:textColor="#016098"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_centerVertical="true"/>
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/moneybagm"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/feeTxt"
-                    tools:ignore="ContentDescription" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_toEndOf="@+id/bbg3"
-                android:layout_marginStart="16dp"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/bbg4">
-
-                <TextView
-                    android:id="@+id/aboutTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="20sp"
-                    android:text="@string/about"
-                    android:textColor="#FF9A1C"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="TextContrastCheck" />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/aboutTxt"
-                    android:src="@drawable/bag"
-                    tools:ignore="ContentDescription,ImageContrastCheck" />
-            </RelativeLayout>
-        </RelativeLayout>
-    </RelativeLayout>
-
+    </ScrollView>
 </RelativeLayout>
